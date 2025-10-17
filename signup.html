@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký - DocSpace</title>
+    <link rel="stylesheet" href="../DangKy/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header GIỐNG HỆT trang chủ -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">DocSpace</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html#features">Tính năng</a></li>
+                <li><a href="index.html#how-it-works">Cách hoạt động</a></li>
+                <li><a href="index.html#pricing">Bảng giá</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="index.html#contact">Liên hệ</a></li>
+                
+                <!-- Mobile Auth Buttons -->
+                <div class="mobile-auth">
+                    <a href="login.html" class="btn btn-login">Đăng nhập</a>
+                    <a href="signup.html" class="btn btn-signup">Đăng ký</a>
+                </div>
+            </ul>
+
+            <!-- Desktop Auth Buttons -->
+            <div class="auth-buttons desktop-auth">
+                <a href="login.html" class="btn btn-login">Đăng nhập</a>
+                <a href="signup.html" class="btn btn-signup">Đăng ký</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Signup Section -->
+    <section class="signup-section">
+        <div class="signup-container">
+            <div class="signup-card">
+                <div class="signup-header">
+                    <h1>Tạo tài khoản mới</h1>
+                    <p>Đăng ký để bắt đầu sử dụng DocSpace ngay hôm nay</p>
+                </div>
+
+                <!-- Social Login Buttons -->
+                <div class="social-auth">
+                    <button class="btn-social btn-google">
+                        <i class="fab fa-google"></i>
+                        Đăng ký với Google
+                    </button>
+                    <button class="btn-social btn-facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        Đăng ký với Facebook
+                    </button>
+                </div>
+
+                <div class="auth-divider">
+                    <span>hoặc đăng ký với email</span>
+                </div>
+
+                <!-- Signup Form -->
+                <form class="signup-form" id="signupForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">Họ *</label>
+                            <input type="text" id="firstName" name="firstName" required placeholder="Nhập họ của bạn">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Tên *</label>
+                            <input type="text" id="lastName" name="lastName" required placeholder="Nhập tên của bạn">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Công ty/Tổ chức</label>
+                        <input type="text" id="company" name="company" placeholder="Tên công ty (không bắt buộc)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Số điện thoại</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Số điện thoại (không bắt buộc)">
+                    </div>
+
+                    <!-- Mật khẩu -->
+<div class="form-group">
+    <label for="password">Mật khẩu *</label>
+    <div class="password-input-wrapper">
+        <input type="password" id="password" name="password" required placeholder="Ít nhất 8 ký tự">
+        <button type="button" class="toggle-password" id="togglePassword">
+            <i class="far fa-eye"></i>
+        </button>
+    </div>
+    <div class="password-strength">
+        <div class="strength-bar">
+            <div class="strength-fill" id="strengthFill"></div>
+        </div>
+        <span class="strength-text" id="strengthText">Mật khẩu yếu</span>
+    </div>
+    <div class="error-message" id="passwordError"></div>
+</div>
+
+<!-- Xác nhận mật khẩu -->
+<div class="form-group">
+    <label for="confirmPassword">Xác nhận mật khẩu *</label>
+    <div class="password-input-wrapper">
+        <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Nhập lại mật khẩu">
+        <button type="button" class="toggle-password" id="toggleConfirmPassword">
+            <i class="far fa-eye"></i>
+        </button>
+    </div>
+    <div class="error-message" id="confirmPasswordError"></div>
+</div>
+
+                    <div class="form-group">
+                        <label for="userType">Bạn là *</label>
+                        <select id="userType" name="userType" required>
+                            <option value="">Chọn loại người dùng</option>
+                            <option value="individual">Cá nhân</option>
+                            <option value="freelancer">Freelancer</option>
+                            <option value="small-business">Doanh nghiệp nhỏ</option>
+                            <option value="enterprise">Doanh nghiệp</option>
+                            <option value="education">Giáo dục</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+    <label class="checkbox-container">
+        <input type="checkbox" id="newsletter" name="newsletter" checked>
+        <span class="checkmark"></span>
+        <span class="checkbox-text">Nhận bản tin và thông tin khuyến mãi</span>
+    </label>
+</div>
+
+<div class="form-group checkbox-group">
+    <label class="checkbox-container">
+        <input type="checkbox" id="terms" name="terms" required>
+        <span class="checkmark"></span>
+        <span class="checkbox-text">
+            Tôi đồng ý với <a href="#" class="text-link">Điều khoản dịch vụ</a> và 
+            <a href="#" class="text-link">Chính sách bảo mật</a> *
+        </span>
+    </label>
+</div>
+
+                    <button type="submit" class="btn btn-primary btn-signup-submit" id="submitBtn">
+                        <span class="btn-text">Tạo tài khoản</span>
+                        <div class="btn-loading" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                    </button>
+                </form>
+
+                <div class="signup-footer">
+                    <p>Đã có tài khoản? <a href="login.html" class="text-link">Đăng nhập ngay</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../DangKy/js/signup.js"></script>
+</body>
+</html>
